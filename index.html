@@ -72,49 +72,100 @@
         <nav id="navbar" class="fixed top-0 left-0 right-0 z-30 transition-all duration-300 bg-black bg-opacity-50">
             <div class="container mx-auto px-6 py-3 flex justify-between items-center">
                 <a href="#home" class="text-2xl font-bold text-white uppercase">Palmarito</a>
-                <div class="hidden md:flex">
-                    <a href="#opportunity" class="nav-link">La Oportunidad</a>
-                    <a href="#place" class="nav-link">El Lugar</a>
-                    <a href="#benefits" class="nav-link">Beneficios</a>
-                    <a href="#gallery" class="nav-link">Galería</a>
-                    <a href="#contact" class="nav-link">Contacto</a>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#opportunity" class="nav-link" data-lang="es">La Oportunidad</a>
+                    <a href="#place" class="nav-link" data-lang="es">El Lugar</a>
+                    <a href="#benefits" class="nav-link" data-lang="es">Beneficios</a>
+                    <a href="#gallery" class="nav-link" data-lang="es">Galería</a>
+                    <a href="#contact" class="nav-link" data-lang="es">Contacto</a>
+
+                    <a href="#opportunity" class="nav-link hidden" data-lang="en">The Opportunity</a>
+                    <a href="#place" class="nav-link hidden" data-lang="en">The Place</a>
+                    <a href="#benefits" class="nav-link hidden" data-lang="en">Benefits</a>
+                    <a href="#gallery" class="nav-link hidden" data-lang="en">Gallery</a>
+                    <a href="#contact" class="nav-link hidden" data-lang="en">Contact</a>
                 </div>
-                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
+                <div class="flex items-center space-x-4">
+                    <button id="language-toggle" class="text-white font-bold uppercase">ES</button>
+                    <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
             <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-70">
-                <a href="#opportunity" class="block nav-link text-center">La Oportunidad</a>
-                <a href="#place" class="block nav-link text-center">El Lugar</a>
-                <a href="#benefits" class="block nav-link text-center">Beneficios</a>
-                <a href="#gallery" class="block nav-link text-center">Galería</a>
-                <a href="#contact" class="block nav-link text-center">Contacto</a>
+                <a href="#opportunity" class="block nav-link text-center" data-lang="es">La Oportunidad</a>
+                <a href="#place" class="block nav-link text-center" data-lang="es">El Lugar</a>
+                <a href="#benefits" class="block nav-link text-center" data-lang="es">Beneficios</a>
+                <a href="#gallery" class="block nav-link text-center" data-lang="es">Galería</a>
+                <a href="#contact" class="block nav-link text-center" data-lang="es">Contacto</a>
+
+                <a href="#opportunity" class="block nav-link text-center hidden" data-lang="en">The Opportunity</a>
+                <a href="#place" class="block nav-link text-center hidden" data-lang="en">The Place</a>
+                <a href="#benefits" class="block nav-link text-center hidden" data-lang="en">Benefits</a>
+                <a href="#gallery" class="block nav-link text-center hidden" data-lang="en">Gallery</a>
+                <a href="#contact" class="block nav-link text-center hidden" data-lang="en">Contact</a>
             </div>
         </nav>
 
         <div class="relative w-full h-screen bg-cover bg-center" style="background-image: url('images/banner.jpeg');">
-		  <div class="flex-grow flex items-center justify-center text-center text-white h-full bg-black bg-opacity-50">
-			<div class="p-8 rounded-lg">
-			  <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-wider mb-4">Invierta en el Paraíso</h1>
-			  <p class="text-xl md:text-2xl font-light">
-				Sea dueño de un pedazo de la costa virgen de Oaxaca en Palmarito.
-			  </p>
-			  <a href="#opportunity" class="mt-8 inline-block bg-[#E07A5F] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider hover:bg-[#D46A4D] transition-colors duration-300">
-				Descubra Más
-			  </a>
-			</div>
-		  </div>
-		</div>
-
+            <div class="flex-grow flex items-center justify-center text-center text-white h-full bg-black bg-opacity-50">
+                <div class="p-8 rounded-lg">
+                    <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-wider mb-4" data-lang="es">Invierta en el Paraíso</h1>
+                    <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-wider mb-4 hidden" data-lang="en">Invest in Paradise</h1>
+                    <p class="text-xl md:text-2xl font-light" data-lang="es">
+                        Sea dueño de un pedazo de la costa virgen de Oaxaca en Palmarito.
+                    </p>
+                    <p class="text-xl md:text-2xl font-light hidden" data-lang="en">
+                        Own a piece of Oaxaca's pristine coastline in Palmarito.
+                    </p>
+                    <a href="#opportunity" class="mt-8 inline-block bg-[#E07A5F] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider hover:bg-[#D46A4D] transition-colors duration-300" data-lang="es">
+                        Descubra Más
+                    </a>
+                    <a href="#opportunity" class="mt-8 inline-block bg-[#E07A5F] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider hover:bg-[#D46A4D] transition-colors duration-300 hidden" data-lang="en">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const languageToggle = document.getElementById('language-toggle');
+            const elements = document.querySelectorAll('[data-lang]');
+
+            languageToggle.addEventListener('click', () => {
+                const currentLang = languageToggle.textContent.trim();
+                const newLang = currentLang === 'EN' ? 'ES' : 'EN';
+
+                elements.forEach(el => {
+                    if (el.dataset.lang === currentLang.toLowerCase()) {
+                        el.classList.add('hidden');
+                    } else if (el.dataset.lang === newLang.toLowerCase()) {
+                        el.classList.remove('hidden');
+                    }
+                });
+
+                languageToggle.textContent = newLang;
+            });
+        });
+    </script>
 
     <main>
         <section id="opportunity" class="py-20">
             <div class="container mx-auto px-6">
-                <h1 style="text-align: center; font-size: 36px;"><strong>La Oportunidad de Inversión</strong></h1>
-				<br/>
-                <p style="text-align: justify;">Le presentamos una oferta única para adquirir un terreno de alto valor estratégico, ubicado en una de las regiones con mayor dinamismo económico y crecimiento sostenido del litoral mexicano. Esta propiedad se encuentra en una zona de creciente plusvalía, impulsada por el desarrollo turístico, la mejora en infraestructura y el interés nacional e internacional por proyectos sustentables. Ideal como base para desarrollos residenciales, ecológicos o comerciales, este terreno representa una plataforma sólida para construir patrimonio, generar rentabilidad y asegurar un futuro próspero en un entorno natural privilegiado.</p>
-				<br/><br/>
+                <h1 style="text-align: center; font-size: 36px;" data-lang="es"><strong>La Oportunidad de Inversión</strong></h1>
+                <h1 style="text-align: center; font-size: 36px;" data-lang="en" class="hidden"><strong>The Investment Opportunity</strong></h1>
+                <br/>
+                <p style="text-align: justify;" data-lang="es">
+                    Le presentamos una oferta única para adquirir un terreno de alto valor estratégico, ubicado en una de las regiones con mayor dinamismo económico y crecimiento sostenido del litoral mexicano. Esta propiedad se encuentra en una zona de creciente plusvalía, impulsada por el desarrollo turístico, la mejora en infraestructura y el interés nacional e internacional por proyectos sustentables. Ideal como base para desarrollos residenciales, ecológicos o comerciales, este terreno representa una plataforma sólida para construir patrimonio, generar rentabilidad y asegurar un futuro próspero en un entorno natural privilegiado.
+                </p>
+                <p style="text-align: justify;" data-lang="en" class="hidden">
+                    We present you with a unique opportunity to acquire a strategically valuable piece of land, located in one of the most economically dynamic and steadily growing regions of the Mexican coastline. This property is situated in an area of increasing value, driven by tourism development, infrastructure improvements, and national and international interest in sustainable projects. Ideal as a base for residential, ecological, or commercial developments, this land represents a solid platform to build wealth, generate profitability, and secure a prosperous future in a privileged natural environment.
+                </p>
+                <br/><br/>
                 <div class="flex flex-col md:flex-row gap-12 items-center">				
                     <div id="opportunity-carousel" class="relative w-full md:w-1/2 mx-auto">
                         <div class="overflow-hidden rounded-lg shadow-2xl">
@@ -133,25 +184,45 @@
                     
                     <div class="md:w-1/2">
                         <ul class="text-lg space-y-6">
-                            <li class="flex items-start">
+                            <li class="flex items-start" data-lang="es">
                                 <span class="text-2xl text-[#E07A5F] mr-4">&#128205;</span>
-                                <div><strong class="block text-xl">Ubicación Estratégica:</strong> Playa Palmarito, Oaxaca, Fracionamiento el Oasis. Un refugio de paz a solo minutos del vibrante Puerto Escondido.</div>
+                                <div><strong class="block text-xl">Ubicación Estratégica:</strong> Playa Palmarito, Oaxaca, Fraccionamiento el Oasis. Un refugio de paz a solo minutos del vibrante Puerto Escondido.</div>
                             </li>
-                            <li class="flex items-start">
-                                <span class="text-2xl text-[#E07A5F] mr-4"><img src="images/modelo.png" width="70" height="auto"></span>
+                            <li class="flex items-start hidden" data-lang="en">
+                                <span class="text-2xl text-[#E07A5F] mr-4">&#128205;</span>
+                                <div><strong class="block text-xl">Strategic Location:</strong> Palmarito Beach, Oaxaca, El Oasis Residential Development. A peaceful haven just minutes from the vibrant town of Puerto Escondido.</div>
+                            </li>
+                            <li class="flex items-start" data-lang="es">
+                                <span class="text-2xl text-[#E07A5F] mr-4"><img src="images/modelo.png" width="50" height="auto"></span>
                                 <div><strong class="block text-xl">Superficie Ideal:</strong> 4 lotes contiguos, perfectos para un proyecto integral. 800 m² en total (200 m² por lote), ofreciendo amplitud y flexibilidad.</div>
                             </li>
-                            <li class="flex items-start">
+                            <li class="flex items-start hidden" data-lang="en">
+                                <span class="text-2xl text-[#E07A5F] mr-4"><img src="images/modelo.png" width="50" height="auto"></span>
+                                <div><strong class="block text-xl">Ideal Surface:</strong> 4 contiguous lots, perfect for an integrated project. 800 m² in total (200 m² per lot), offering spaciousness and flexibility.</div>
+                            </li>
+                            <li class="flex items-start" data-lang="es">
                                 <span class="text-2xl text-[#E07A5F] mr-4">&#127969;</span>
                                 <div><strong class="block text-xl">Potencial Ilimitado:</strong> Ideal para construir la casa de sus sueños, un exclusivo proyecto de villas vacacionales o como una sólida inversión patrimonial.</div>
                             </li>
-							<li class="flex items-start">
-                                <span class="text-2xl text-[#E07A5F] mr-4"><img src="images/solar.png" width="70" height="auto"></span>
-                                <div><strong class="block text-xl">Potencial Ilimitado:</strong> Ideal para instalar paneles solares. Esta solución reduce la dependencia de redes convencionales y promueve el uso de energías limpias.</div>
+                            <li class="flex items-start hidden" data-lang="en">
+                                <span class="text-2xl text-[#E07A5F] mr-4">&#127969;</span>
+                                <div><strong class="block text-xl">Unlimited Potential:</strong> Ideal for building your dream home, an exclusive vacation villa project, or as a solid investment asset.</div>
                             </li>
-							<li class="flex items-start">
+                            <li class="flex items-start" data-lang="es">
+                                <span class="text-2xl text-[#E07A5F] mr-4"><img src="images/solar.png" width="60" height="auto"></span>
+                                <div><strong class="block text-xl">Energía Sustentable:</strong> Ideal para instalar paneles solares. Esta solución reduce la dependencia de redes convencionales y promueve el uso de energías limpias.</div>
+                            </li>
+                            <li class="flex items-start hidden" data-lang="en">
+                                <span class="text-2xl text-[#E07A5F] mr-4"><img src="images/solar.png" width="60" height="auto"></span>
+                                <div><strong class="block text-xl">Sustainable Energy:</strong> Perfect for installing solar panels. This solution reduces dependency on conventional grids and promotes the use of clean energy.</div>
+                            </li>
+                            <li class="flex items-start" data-lang="es">
                                 <span class="text-2xl text-[#E07A5F] mr-4"><img src="images/agua.png" width="30" height="auto"></span>
                                 <div><strong class="block text-xl">Oferta Exclusiva:</strong> Paquete de 4 lotes contiguos, perfectos para un proyecto integral.</div>
+                            </li>
+                            <li class="flex items-start hidden" data-lang="en">
+                                <span class="text-2xl text-[#E07A5F] mr-4"><img src="images/agua.png" width="30" height="auto"></span>
+                                <div><strong class="block text-xl">Exclusive Offer:</strong> Package of 4 contiguous lots, perfect for an integrated project.</div>
                             </li>
                         </ul>
                     </div>
@@ -161,152 +232,192 @@
 
         <section id="place" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 style="text-align: center; font-size: 36px;"><strong>Un tesoro escondido</strong></h2>
-				<br/>
-                <p style="text-align: justify;">Donde la exclusividad se encuentra con la naturaleza virgen. Este enclave privilegiado en la costa de Oaxaca representa mucho más que una ubicación geográfica: es una experiencia de serenidad, belleza intacta y privacidad absoluta. A diferencia de los destinos saturados por el turismo convencional, Palmarito ofrece una extensa playa virgen, ideal para quienes valoran el silencio, el espacio y una conexión genuina con el entorno natural. Aquí, cada amanecer es una invitación a descubrir nuevas facetas del paraíso: desde caminatas solitarias por la arena dorada hasta proyectos residenciales que respetan y celebran el paisaje. Palmarito no solo se visita—se vive.</p>
-                <br/>
-                <div class="w-full max-w-4xl mx-auto">
-                    <div id="tab1" class="tab-content active">
-                        <div class="flex flex-col md:flex-row gap-8 items-center bg-gray-50 p-8 rounded-lg">
-                            <img src="images/PlayaVirgenOaxaca.jpg" class="w-full md:w-1/2 h-64 object-cover rounded-md shadow-md" alt="Playa virgen en Oaxaca">
-                            <div class="md:w-1/2">
-                                <h3 class="text-2xl font-bold mb-3 text-[#81B29A]">Un Océano de Tranquilidad</h3>
-                                <p>Kilómetros de arena dorada y suave oleaje le esperan. Este es el escenario ideal para largas caminatas, disfrutar de atardeceres espectaculares y relajarse lejos del bullicio, en un ambiente de total privacidad.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab2" class="tab-content">
-                        <div class="flex flex-col md:flex-row gap-8 items-center bg-gray-50 p-8 rounded-lg">
-                            <img src="images/turtle-release-banner-1.jpg" class="w-full md:w-1/2 h-64 object-cover rounded-md shadow-md" alt="Liberación de tortugas">
-                             <div class="md:w-1/2">
-                                <h3 class="text-2xl font-bold mb-3 text-[#81B29A]">El Milagro de la Vida</h3>
-                                <p>Palmarito es famoso por sus campamentos tortugueros. Participe en la mágica experiencia de liberar crías de tortugas marinas al mar, una actividad inolvidable que conecta profundamente con el ciclo de la naturaleza.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab3" class="tab-content">
-                         <div class="flex flex-col md:flex-row gap-8 items-center bg-gray-50 p-8 rounded-lg">
-                            <img src="images/Portada.-Bioluminisencia-en-Puerto-Escondido-Oaxaca.-Imagen-archivo-1.jpg" class="w-full md:w-1/2 h-64 object-cover rounded-md shadow-md" alt="Laguna de Manialtepec">
-                            <div class="md:w-1/2">
-                                <h3 class="text-2xl font-bold mb-3 text-[#81B29A]">Cultura y Aventura</h3>
-                                <p>La costa oaxaqueña es un crisol de historia zapoteca y mixteca. Explore maravillas como la bioluminiscencia en la Laguna de Manialtepec o sumérjase en la vibrante cultura y gastronomía de Puerto Escondido, todo a su alcance.</p>
-                            </div>
-                        </div>
+            <h2 style="text-align: center; font-size: 36px;" data-lang="es" class="lang-es"><strong>Un tesoro escondido</strong></h2>
+            <h2 style="text-align: center; font-size: 36px;" data-lang="en" class="lang-en hidden"><strong>A Hidden Treasure</strong></h2>
+            <br/>
+            <p style="text-align: justify;" data-lang="es" class="lang-es">
+                Donde la exclusividad se encuentra con la naturaleza virgen. Este enclave privilegiado en la costa de Oaxaca representa mucho más que una ubicación geográfica: es una experiencia de serenidad, belleza intacta y privacidad absoluta. A diferencia de los destinos saturados por el turismo convencional, Palmarito ofrece una extensa playa virgen, ideal para quienes valoran el silencio, el espacio y una conexión genuina con el entorno natural. Aquí, cada amanecer es una invitación a descubrir nuevas facetas del paraíso: desde caminatas solitarias por la arena dorada hasta proyectos residenciales que respetan y celebran el paisaje. Palmarito no solo se visita—se vive.
+            </p>
+            <p style="text-align: justify;" data-lang="en" class="lang-en hidden">
+                Where exclusivity meets untouched nature. This privileged enclave on the Oaxaca coast represents much more than a geographic location: it is an experience of serenity, unspoiled beauty, and absolute privacy. Unlike destinations crowded by conventional tourism, Palmarito offers an extensive virgin beach, ideal for those who value silence, space, and a genuine connection with the natural environment. Here, every sunrise is an invitation to discover new facets of paradise: from solitary walks on golden sands to residential projects that respect and celebrate the landscape. Palmarito is not just visited—it is lived.
+            </p>
+            <br/>
+            <div class="w-full max-w-4xl mx-auto">
+                <div id="tab1" class="tab-content active">
+                <div class="flex flex-col md:flex-row gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                    <img src="images/PlayaVirgenOaxaca.jpg" class="w-full md:w-1/2 h-64 object-cover rounded-md shadow-md" alt="Playa virgen en Oaxaca">
+                    <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-3 text-[#81B29A]" data-lang="es" class="lang-es">Un Océano de Tranquilidad</h3>
+                    <h3 class="text-2xl font-bold mb-3 text-[#81B29A] hidden" data-lang="en" class="lang-en">An Ocean of Tranquility</h3>
+                    <p data-lang="es" class="lang-es">Kilómetros de arena dorada y suave oleaje le esperan. Este es el escenario ideal para largas caminatas, disfrutar de atardeceres espectaculares y relajarse lejos del bullicio, en un ambiente de total privacidad.</p>
+                    <p data-lang="en" class="lang-en hidden">Kilometers of golden sand and gentle waves await you. This is the ideal setting for long walks, enjoying spectacular sunsets, and relaxing far from the hustle and bustle, in an atmosphere of total privacy.</p>
                     </div>
                 </div>
+                </div>
+                <div id="tab2" class="tab-content">
+                <div class="flex flex-col md:flex-row gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                    <img src="images/turtle-release-banner-1.jpg" class="w-full md:w-1/2 h-64 object-cover rounded-md shadow-md" alt="Liberación de tortugas">
+                    <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-3 text-[#81B29A]" data-lang="es" class="lang-es">El Milagro de la Vida</h3>
+                    <h3 class="text-2xl font-bold mb-3 text-[#81B29A] hidden" data-lang="en" class="lang-en">The Miracle of Life</h3>
+                    <p data-lang="es" class="lang-es">Palmarito es famoso por sus campamentos tortugueros. Participe en la mágica experiencia de liberar crías de tortugas marinas al mar, una actividad inolvidable que conecta profundamente con el ciclo de la naturaleza.</p>
+                    <p data-lang="en" class="lang-en hidden">Palmarito is famous for its turtle camps. Participate in the magical experience of releasing baby sea turtles into the ocean, an unforgettable activity that deeply connects with the cycle of nature.</p>
+                    </div>
+                </div>
+                </div>
+                <div id="tab3" class="tab-content">
+                <div class="flex flex-col md:flex-row gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                    <img src="images/Portada.-Bioluminisencia-en-Puerto-Escondido-Oaxaca.-Imagen-archivo-1.jpg" class="w-full md:w-1/2 h-64 object-cover rounded-md shadow-md" alt="Laguna de Manialtepec">
+                    <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-3 text-[#81B29A]" data-lang="es" class="lang-es">Cultura y Aventura</h3>
+                    <h3 class="text-2xl font-bold mb-3 text-[#81B29A] hidden" data-lang="en" class="lang-en">Culture and Adventure</h3>
+                    <p data-lang="es" class="lang-es">La costa oaxaqueña es un crisol de historia zapoteca y mixteca. Explore maravillas como la bioluminiscencia en la Laguna de Manialtepec o sumérjase en la vibrante cultura y gastronomía de Puerto Escondido, todo a su alcance.</p>
+                    <p data-lang="en" class="lang-en hidden">The Oaxacan coast is a melting pot of Zapotec and Mixtec history. Explore wonders such as the bioluminescence in the Manialtepec Lagoon or immerse yourself in the vibrant culture and gastronomy of Puerto Escondido, all within reach.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
             </div>
         </section>
 
         <section id="benefits" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 style="text-align: center; font-size: 36px;"><strong>Beneficios de su Inversión</strong></h2>
-				<br/>
-                <p style="text-align: justify;">Más que adquirir un terreno, es construir futuro. Comprar un lote en Palmarito no significa únicamente obtener una propiedad; representa una decisión estratégica que combina visión financiera con calidad de vida. Ubicado en una zona de alto crecimiento y plusvalía sostenida, este terreno ofrece el escenario perfecto para desarrollar proyectos residenciales, ecológicos o turísticos en un entorno natural privilegiado. Esta inversión inteligente se convierte en el cimiento de un patrimonio duradero, respaldado por el dinamismo económico de la región y el atractivo creciente del Pacífico mexicano. Palmarito no es solo un lugar: es una oportunidad para vivir, crecer y trascender.</p>
-				<br/>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="benefit-card">
-                        <div class="text-5xl text-[#E07A5F] mb-4">&#128200;</div>
-                        <h3 class="text-2xl font-bold mb-2">Alta Plusvalía</h3>
-                        <p>La nueva autopista Oaxaca-Puerto Escondido ha disparado el interés y el valor de la zona. Su inversión está posicionada para un crecimiento exponencial.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="text-5xl text-[#E07A5F] mb-4">&#127796;</div>
-                        <h3 class="text-2xl font-bold mb-2">Calidad de Vida</h3>
-                        <p>Despierte con el sonido de las olas en un entorno seguro y relajado. Es el escape perfecto del estrés de la ciudad y un santuario para su bienestar.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="text-5xl text-[#E07A5F] mb-4">&#128176;</div>
-                        <h3 class="text-2xl font-bold mb-2">Potencial de Renta</h3>
-                        <p>La alta demanda de alojamiento vacacional en la región asegura un excelente retorno de inversión a través de rentas a corto o largo plazo.</p>
-                    </div>
-                    <div class="benefit-card">
-                         <div class="text-5xl text-[#E07A5F] mb-4">&#127758;</div>
-                        <h3 class="text-2xl font-bold mb-2">Destino Mundial</h3>
-                        <p>Disfrute de la cercanía a Puerto Escondido, con su gastronomía, surf de clase mundial y una activa comunidad internacional.</p>
-                    </div>
+            <h2 style="text-align: center; font-size: 36px;" data-lang="es"><strong>Beneficios de su Inversión</strong></h2>
+            <h2 style="text-align: center; font-size: 36px;" data-lang="en" class="hidden"><strong>Benefits of Your Investment</strong></h2>
+            <br/>
+            <p style="text-align: justify;" data-lang="es">
+                Más que adquirir un terreno, es construir futuro. Comprar un lote en Palmarito no significa únicamente obtener una propiedad; representa una decisión estratégica que combina visión financiera con calidad de vida. Ubicado en una zona de alto crecimiento y plusvalía sostenida, este terreno ofrece el escenario perfecto para desarrollar proyectos residenciales, ecológicos o turísticos en un entorno natural privilegiado. Esta inversión inteligente se convierte en el cimiento de un patrimonio duradero, respaldado por el dinamismo económico de la región y el atractivo creciente del Pacífico mexicano. Palmarito no es solo un lugar: es una oportunidad para vivir, crecer y trascender.
+            </p>
+            <p style="text-align: justify;" data-lang="en" class="hidden">
+                More than acquiring land, it is building a future. Buying a lot in Palmarito does not only mean obtaining a property; it represents a strategic decision that combines financial vision with quality of life. Located in an area of high growth and sustained value appreciation, this land offers the perfect setting to develop residential, ecological, or tourist projects in a privileged natural environment. This smart investment becomes the foundation of lasting wealth, backed by the region's economic dynamism and the growing appeal of the Mexican Pacific. Palmarito is not just a place: it is an opportunity to live, grow, and transcend.
+            </p>
+            <br/>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="benefit-card">
+                <div class="text-5xl text-[#E07A5F] mb-4">&#128200;</div>
+                <h3 class="text-2xl font-bold mb-2" data-lang="es">Alta Plusvalía</h3>
+                <h3 class="text-2xl font-bold mb-2 hidden" data-lang="en">High Value Appreciation</h3>
+                <p data-lang="es">La nueva autopista Oaxaca-Puerto Escondido ha disparado el interés y el valor de la zona. Su inversión está posicionada para un crecimiento exponencial.</p>
+                <p data-lang="en" class="hidden">The new Oaxaca-Puerto Escondido highway has sparked interest and value in the area. Your investment is positioned for exponential growth.</p>
                 </div>
-                <!-- <div class="mt-20">
-                    <h3 class="text-3xl font-bold text-center mb-8 text-[#3D405B]">Visualizando el Crecimiento</h3>
-                    <div class="chart-container">
-                        <canvas id="plusvaliaChart"></canvas>
-                    </div>
-                </div> -->
+                <div class="benefit-card">
+                <div class="text-5xl text-[#E07A5F] mb-4">&#127796;</div>
+                <h3 class="text-2xl font-bold mb-2" data-lang="es">Calidad de Vida</h3>
+                <h3 class="text-2xl font-bold mb-2 hidden" data-lang="en">Quality of Life</h3>
+                <p data-lang="es">Despierte con el sonido de las olas en un entorno seguro y relajado. Es el escape perfecto del estrés de la ciudad y un santuario para su bienestar.</p>
+                <p data-lang="en" class="hidden">Wake up to the sound of the waves in a safe and relaxed environment. It is the perfect escape from city stress and a sanctuary for your well-being.</p>
+                </div>
+                <div class="benefit-card">
+                <div class="text-5xl text-[#E07A5F] mb-4">&#128176;</div>
+                <h3 class="text-2xl font-bold mb-2" data-lang="es">Potencial de Renta</h3>
+                <h3 class="text-2xl font-bold mb-2 hidden" data-lang="en">Rental Potential</h3>
+                <p data-lang="es">La alta demanda de alojamiento vacacional en la región asegura un excelente retorno de inversión a través de rentas a corto o largo plazo.</p>
+                <p data-lang="en" class="hidden">The high demand for vacation accommodations in the region ensures an excellent return on investment through short- or long-term rentals.</p>
+                </div>
+                <div class="benefit-card">
+                <div class="text-5xl text-[#E07A5F] mb-4">&#127758;</div>
+                <h3 class="text-2xl font-bold mb-2" data-lang="es">Destino Mundial</h3>
+                <h3 class="text-2xl font-bold mb-2 hidden" data-lang="en">World-Class Destination</h3>
+                <p data-lang="es">Disfrute de la cercanía a Puerto Escondido, con su gastronomía, surf de clase mundial y una activa comunidad internacional.</p>
+                <p data-lang="en" class="hidden">Enjoy proximity to Puerto Escondido, with its gastronomy, world-class surfing, and an active international community.</p>
+                </div>
+            </div>
             </div>
         </section>
 
         <section id="gallery" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 style="text-align: left; font-size: 36px;"><strong>El Estilo de Vida Palmarito</strong></h2>
-				<br/>
-                <p style="text-align: justify;">Permítase descubrir la belleza natural, la aventura vibrante y la serenidad profunda que convergen en este rincón extraordinario del Pacífico mexicano. Cada paisaje cuenta una historia, cada atardecer revela una promesa, y cada momento vivido aquí se convierte en parte de un estilo de vida que trasciende las palabras.</p>
-				<br/>
-                <div id="gallery-carousel" class="relative w-full max-w-4xl mx-auto">
-                    <div class="overflow-hidden rounded-lg shadow-2xl">
-                        <div class="flex transition-transform duration-500 ease-in-out carousel-slider-js">
-                            <div class="carousel-slide"><img src="images/atardecer-en-la-playa.jpg" alt="Atardecer en Palmarito" class="w-full h-[50vh] object-cover"></div>
-                            <div class="carousel-slide"><img src="images/puerto-surf-beach-01-845x684.jpg" alt="Surf en Puerto Escondido" class="w-full h-[50vh] object-cover"></div>
-                            <div class="carousel-slide"><img src="images/comida-oaxaquena-una-delicia-mexicana.jpg" alt="Gastronomía Oaxaqueña" class="w-full h-[50vh] object-cover"></div>
-                            <div class="carousel-slide"><img src="images/tortugas-marinas-puerto-escondido.jpg" alt="Tortugas marinas" class="w-full h-[50vh] object-cover"></div>
-                            <div class="carousel-slide"><img src="images/palms-parasols-sun-loungers-beach-people-zicatela-puerto-escondido-mexico-photo.jpg" alt="Playa con palmeras" class="w-full h-[50vh] object-cover"></div>
-                            <div class="carousel-slide"><img src="images/LagunaManialtepec.jpg" alt="Laguna bioluminiscente" class="w-full h-[50vh] object-cover"></div>
-                            <div class="carousel-slide"><img src="images/vistaAereaPalmarito.jpg" alt="Vista aérea de la costa" class="w-full h-[50vh] object-cover"></div>
-                        </div>
-                    </div>
-                    <button class="prev-btn-js absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-                    </button>
-                    <button class="next-btn-js absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                    </button>
+            <h2 style="text-align: left; font-size: 36px;" data-lang="es"><strong>El Estilo de Vida Palmarito</strong></h2>
+            <h2 style="text-align: left; font-size: 36px;" data-lang="en" class="hidden"><strong>The Palmarito Lifestyle</strong></h2>
+            <br/>
+            <p style="text-align: justify;" data-lang="es">
+                Permítase descubrir la belleza natural, la aventura vibrante y la serenidad profunda que convergen en este rincón extraordinario del Pacífico mexicano. Cada paisaje cuenta una historia, cada atardecer revela una promesa, y cada momento vivido aquí se convierte en parte de un estilo de vida que trasciende las palabras.
+            </p>
+            <p style="text-align: justify;" data-lang="en" class="hidden">
+                Allow yourself to discover the natural beauty, vibrant adventure, and deep serenity that converge in this extraordinary corner of the Mexican Pacific. Each landscape tells a story, each sunset reveals a promise, and each moment lived here becomes part of a lifestyle that transcends words.
+            </p>
+            <br/>
+            <div id="gallery-carousel" class="relative w-full max-w-4xl mx-auto">
+                <div class="overflow-hidden rounded-lg shadow-2xl">
+                <div class="flex transition-transform duration-500 ease-in-out carousel-slider-js">
+                    <div class="carousel-slide"><img src="images/atardecer-en-la-playa.jpg" alt="Atardecer en Palmarito" class="w-full h-[50vh] object-cover"></div>
+                    <div class="carousel-slide"><img src="images/puerto-surf-beach-01-845x684.jpg" alt="Surf en Puerto Escondido" class="w-full h-[50vh] object-cover"></div>
+                    <div class="carousel-slide"><img src="images/comida-oaxaquena-una-delicia-mexicana.jpg" alt="Gastronomía Oaxaqueña" class="w-full h-[50vh] object-cover"></div>
+                    <div class="carousel-slide"><img src="images/tortugas-marinas-puerto-escondido.jpg" alt="Tortugas marinas" class="w-full h-[50vh] object-cover"></div>
+                    <div class="carousel-slide"><img src="images/palms-parasols-sun-loungers-beach-people-zicatela-puerto-escondido-mexico-photo.jpg" alt="Playa con palmeras" class="w-full h-[50vh] object-cover"></div>
+                    <div class="carousel-slide"><img src="images/LagunaManialtepec.jpg" alt="Laguna bioluminiscente" class="w-full h-[50vh] object-cover"></div>
+                    <div class="carousel-slide"><img src="images/vistaAereaPalmarito.jpg" alt="Vista aérea de la costa" class="w-full h-[50vh] object-cover"></div>
                 </div>
+                </div>
+                <button class="prev-btn-js absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <button class="next-btn-js absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7-7" /></svg>
+                </button>
+            </div>
             </div>
         </section>
 
         <section id="contact" class="py-20 bg-[#3D405B] text-white">
-            <!-- <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold mb-4">No Deje Pasar Esta Oportunidad</h2>
-                <p class="text-lg max-w-3xl mx-auto mb-8">Estos lotes representan una de las últimas oportunidades para invertir en Palmarito a un precio competitivo. Asegure su patrimonio y comience a construir sus sueños en la costa de Oaxaca.</p>
-                <a href="mailto:contacto@palmarito.com?subject=Información sobre lotes en Palmarito" class="bg-white text-[#E07A5F] font-bold py-4 px-10 rounded-full uppercase tracking-wider hover:bg-amber-100 transition-colors duration-300 text-lg">Contáctenos Hoy</a>
-            </div> -->
-			<div style="
-			  background-color: #f3f4f6;
-			  padding: 24px;
-			  border-radius: 12px;
-			  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-			  max-width: 600px;
-			  margin: 0 auto;
-			  font-family: Arial, sans-serif;
-			  color: #333;
-			">
-			  <h2 style="
-				text-align: center;
-				font-size: 24px;
-				font-weight: bold;
-				margin-bottom: 16px;
-			  ">Contáctenos</h2>
+            <div style="
+              background-color: #f3f4f6;
+              padding: 24px;
+              border-radius: 12px;
+              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+              max-width: 600px;
+              margin: 0 auto;
+              font-family: Arial, sans-serif;
+              color: #333;
+            ">
+              <h2 style="
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 16px;
+              " data-lang="es">Contáctenos</h2>
+              <h2 style="
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 16px;
+              " data-lang="en" class="hidden">Contact Us</h2>
 
-			  <p style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-				<img src="whatsapp.png" width="20" height="auto" style="display: inline-block;">
-				<a href="https://wa.me/573001234567" target="_blank" style="color: #059669; text-decoration: none; margin-left: 6px;">
-				  +57 300 123 4567
-				</a>
-			  </p>
+              <!-- <p style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;" data-lang="es">
+            <img src="whatsapp.png" width="20" height="auto" style="display: inline-block;">
+            <a href="https://wa.me/573001234567" target="_blank" style="color: #059669; text-decoration: none; margin-left: 6px;">
+              +57 300 123 4567
+            </a>
+              </p> -->
+              <p style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;" data-lang="en" class="hidden">
+                <img src="images/whatsapp.png" width="20" height="auto" style="display: inline-block;">
+                <a href="https://wa.me/573001234567" target="_blank" style="color: #059669; text-decoration: none; margin-left: 6px;">
+                +57 300 123 4567
+                </a>
+              </p>
 
-				<p style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-				  <img src="email.png" width="20" height="20" style="display: inline-block;">
-				  <a href="mailto:info@palmaritoinversiones.com" style="color: #2563eb; text-decoration: none;">
-					info@palmaritoinversiones.com
-				  </a>
-				</p>
-			</div>
-
+              <p style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;" data-lang="es">
+                <img src="images/email.png" width="20" height="20" style="display: inline-block;">
+                <a href="mailto:info@palmaritoinversiones.com" style="color: #2563eb; text-decoration: none;">
+                info@palmaritoinversiones.com
+                </a>
+              </p>
+              <!-- <p style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;" data-lang="en" class="hidden">
+            <img src="email.png" width="20" height="20" style="display: inline-block;">
+            <a href="mailto:info@palmaritoinversiones.com" style="color: #2563eb; text-decoration: none;">
+              info@palmaritoinversiones.com
+            </a>
+              </p> -->
+            </div>
         </section>
     </main>
 
     <footer class="bg-[#2a2c3f] text-white py-6">
         <div class="container mx-auto px-6 text-center text-sm">
-            <p>&copy; 2025 Inversiones Palmarito. Todos los derechos reservados.</p>
-            <p class="mt-2">Las imágenes son representativas del área. La información presentada está sujeta a cambios.</p>
+            <p data-lang="es">&copy; 2025 Inversiones Palmarito. Todos los derechos reservados.</p>
+            <p data-lang="en" class="hidden">&copy; 2025 Palmarito Investments. All rights reserved.</p>
+            <p class="mt-2" data-lang="es">Las imágenes son representativas del área. La información presentada está sujeta a cambios.</p>
+            <p class="mt-2 hidden" data-lang="en">Images are representative of the area. The information presented is subject to change.</p>
         </div>
     </footer>
 
